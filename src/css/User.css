@@ -1,0 +1,10 @@
+.media{
+  margin-bottom:20px;
+}
+.d-flex img{
+  width: 250px;
+  height: 250px;
+  padding:4px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}

@@ -1,0 +1,11 @@
+.navbar{
+  border-bottom:1px solid #e6e6e6;
+  background: white !important;
+}
+.icon{
+  font-size: 25px;
+  color:#737373;
+}
+.navbar-brand{
+  width: 150px;
+}
