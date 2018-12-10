@@ -79,18 +79,13 @@ class User extends React.Component<Props, State> {
   private loadUsers() {
     let url = 'https://jsonplaceholder.typicode.com/users';
 
-    // https://jsonplaceholder.typicode.com/users?name=a&email=b&website=c 
-
     const fields = ['username', 'email', 'phone', 'website', 'name'];
-    // if (this.state.name) {
-    //   url = url + '?name=' + this.state.name;
-    // }
+
     const params = [];
 
     for (let i in this.state) {
       if (fields.indexOf(i) > -1 && this.state[i]) {
         const param = i + '=' + this.state[i];
-        // console.log(param);
         params.push(param);
       }
     }
@@ -102,29 +97,12 @@ class User extends React.Component<Props, State> {
         this.setState({
           list: json,
         });
+        console.log(json);
       });
   }
 
-
-
   render() {
     console.log('render', this.state.list);
-    // let { list } = this.state;
-
-    // const imgs = [
-    //   require('src/images/img_avatar3.png'),
-    //   require('src/images/img_avatar1.png'),
-    //   require('src/images/img_avatar5.png'),
-    // ];
-
-    // list = list.map((item) => {
-    //   const imgIndex = Math.round(Math.random());
-
-    //   item.image = imgs[imgIndex];
-    //   return item;
-    // });
-    // console.log('render', list);
-
     return (
       <Layout>
         <div className="user">
